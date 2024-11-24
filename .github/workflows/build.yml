@@ -38,6 +38,14 @@ jobs:
           java-version: 21
       # - name: Setup Gradle
       #   uses: gradle/actions/setup-gradle@v3
+      - name: Set up Gradle 8.8
+        uses: gradle/wrapper-validation-action@v1
+        with:
+          gradle-version: '8.8'
+      - name: Verify Gradle version
+        run: ./gradlew --version
+      - name: Verify Gradle version
+        run: ./gradlew --version
       - name: Build
         run: ./gradlew ${{ matrix.loader }}:build
       - name: Upload Jar Artifact
