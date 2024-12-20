@@ -6,9 +6,6 @@ on:
   push:
     branches:
       - main
-      - 1.20.0-1
-      - 1.20.2
-      - 1.20.4
 
 jobs:
   check:
@@ -28,7 +25,7 @@ jobs:
       matrix:
         loader:
           - fabric
-          - neoforge
+          # - neoforge
       fail-fast: false
     steps:
       - name: Checkout repository
